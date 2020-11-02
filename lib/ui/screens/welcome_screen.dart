@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:twitter_login/twitter_login.dart';
 import 'package:kuraken/app_config.dart';
 import 'package:kuraken/ui/components/index.dart';
 import 'package:kuraken/ui/screens/index.dart';
@@ -48,21 +50,28 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 48.0,
+                    height: 96.0,
                   ),
-                  RoundedButton(
-                    color: Colors.lightBlueAccent,
-                    onPressed: () {
-                      Navigator.pushNamed(context, LoginScreen.id);
+                  TwitterAuthButton(
+                    onPressed: () async {
+                      final twitterLogin = TwitterLogin(
+                        apiKey: DotEnv().env['TWITTER_API_KEY'],
+                        apiSecretKey: DotEnv().env['TWITTER_API_SECRET_KEY'],
+                        redirectURI: 'kuraken://app',
+                      );
+                      final authResult = await twitterLogin.login();
+                      switch (authResult.status) {
+                        case TwitterLoginStatus.loggedIn:
+                          Navigator.pushNamed(context, HomeScreen.id);
+                          break;
+                        case TwitterLoginStatus.cancelledByUser:
+                          print('cancell');
+                          break;
+                        case TwitterLoginStatus.error:
+                          print('error');
+                          break;
+                      }
                     },
-                    label: 'Log In',
-                  ),
-                  RoundedButton(
-                    color: Colors.blueAccent,
-                    onPressed: () {
-                      Navigator.pushNamed(context, RegisterScreen.id);
-                    },
-                    label: 'Register',
                   ),
                 ],
               )
