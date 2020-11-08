@@ -1,4 +1,4 @@
-package com.example.kuraken
+package jp.srkm.kuraken
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -54,10 +54,11 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   TwitterAuthButton(
                     onPressed: () async {
+                      print(DotEnv().env['TWITTER_API_SECRET_KEY']);
                       final twitterLogin = TwitterLogin(
                         apiKey: DotEnv().env['TWITTER_API_KEY'],
                         apiSecretKey: DotEnv().env['TWITTER_API_SECRET_KEY'],
-                        redirectURI: 'kuraken://app',
+                        redirectURI: DotEnv().env['TWITTER_CALLBACK_URL'],
                       );
                       final authResult = await twitterLogin.login();
                       switch (authResult.status) {
@@ -69,6 +70,9 @@ class WelcomeScreen extends StatelessWidget {
                           break;
                         case TwitterLoginStatus.error:
                           print('error');
+                          print(authResult.authToken);
+                          print(authResult.authTokenSecret);
+                          print(authResult.errorMessage);
                           break;
                       }
                     },
