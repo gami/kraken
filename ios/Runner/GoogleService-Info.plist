@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>331504609972-un6ec25m806k9d77cnul4r0oiqodk2l8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.331504609972-un6ec25m806k9d77cnul4r0oiqodk2l8</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>331504609972-v8f51jcgog7gmiifn12jnupi7aiuv3l1.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC13xP-fjJaAbdOmKWNAsecu0DbWuoouM0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>331504609972</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>jp.srkm.kuraken</string>
+	<key>PROJECT_ID</key>
+	<string>kuraken-8d553</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kuraken-8d553.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:331504609972:ios:fd87290f67d601ad3985e1</string>
+	<key>DATABASE_URL</key>
+	<string>https://kuraken-8d553.firebaseio.com</string>
+</dict>
+</plist>
