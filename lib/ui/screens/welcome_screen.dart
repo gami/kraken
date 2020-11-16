@@ -58,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
                       final twitterLogin = TwitterLogin(
                         apiKey: DotEnv().env['TWITTER_API_KEY'],
                         apiSecretKey: DotEnv().env['TWITTER_API_SECRET_KEY'],
-                        redirectURI: DotEnv().env['TWITTER_CALLBACK_URL'],
+                        redirectURI: AppConfig.appScheme,
                       );
                       final authResult = await twitterLogin.login();
                       switch (authResult.status) {
