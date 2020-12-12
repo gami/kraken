@@ -8,20 +8,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppConfig.appName),
+        title: const Text(AppConfig.appName),
       ),
       body: Scaffold(
         backgroundColor: Colors.indigo[900],
         body: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 24.0,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 24,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Column(
-                children: [],
+                children: const [],
               )
             ],
           ),

@@ -1,4 +1,4 @@
 class AppConfig {
-  static const appName = "Kuraken";
-  static const appScheme = "'kuraken://app'";
+  static const appName = 'KURAKEN';
+  static const appScheme = 'kuraken://app';
 }
