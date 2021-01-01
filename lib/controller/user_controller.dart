@@ -1,4 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:kuraken/controller/error_controller.dart';
 import 'package:tuple/tuple.dart';
 import 'package:twitter_login/twitter_login.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -49,6 +50,9 @@ class UserController {
         break;
       case TwitterLoginStatus.cancelledByUser:
         print('canceled by user');
+
+        read(errorController).show('Sign-in attempt was cancelled.');
+
         return null;
         break;
       case TwitterLoginStatus.error:
