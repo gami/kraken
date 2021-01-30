@@ -9,6 +9,26 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppConfig.appName),
+        bottom: const TabBar(
+          tabs: [
+            Tab(
+              icon: Icon(Icons.stars_sharp),
+              text: 'Ranking',
+            ),
+            Tab(
+              icon: Icon(Icons.schedule),
+              text: 'Match',
+            ),
+            Tab(
+              icon: Icon(Icons.group),
+              text: 'Team',
+            ),
+            Tab(
+              icon: Icon(Icons.self_improvement),
+              text: 'Profile',
+            ),
+          ],
+        ),
       ),
       body: Scaffold(
         backgroundColor: Colors.indigo[900],
@@ -21,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Column(
-                children: const [],
+                children: const [Text('Home')],
               )
             ],
           ),
