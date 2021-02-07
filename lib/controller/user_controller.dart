@@ -39,8 +39,8 @@ class UserController {
 
   Future<Tuple2<String, String>> signInWithTwitter() async {
     final twitterLogin = TwitterLogin(
-      apiKey: DotEnv().env['TWITTER_API_KEY'],
-      apiSecretKey: DotEnv().env['TWITTER_API_SECRET_KEY'],
+      apiKey: env['TWITTER_API_KEY'],
+      apiSecretKey: env['TWITTER_API_SECRET_KEY'],
       redirectURI: AppConfig.appScheme,
     );
     final authResult = await twitterLogin.login();
