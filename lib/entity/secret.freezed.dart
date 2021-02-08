@@ -40,6 +40,7 @@ mixin _$Secret {
   String get authTokenSecret;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SecretCopyWith<Secret> get copyWith;
 }
 
@@ -151,6 +152,7 @@ class _$_Secret with DiagnosticableTreeMixin implements _Secret {
       const DeepCollectionEquality().hash(accessToken) ^
       const DeepCollectionEquality().hash(authTokenSecret);
 
+  @JsonKey(ignore: true)
   @override
   _$SecretCopyWith<_Secret> get copyWith =>
       __$SecretCopyWithImpl<_Secret>(this, _$identity);
@@ -172,5 +174,6 @@ abstract class _Secret implements Secret {
   @override
   String get authTokenSecret;
   @override
+  @JsonKey(ignore: true)
   _$SecretCopyWith<_Secret> get copyWith;
 }

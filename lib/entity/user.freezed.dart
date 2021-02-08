@@ -45,6 +45,7 @@ mixin _$User {
   DateTime get signedInAt;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith;
 }
 
@@ -177,6 +178,7 @@ class _$_User with DiagnosticableTreeMixin implements _User {
       const DeepCollectionEquality().hash(photoURL) ^
       const DeepCollectionEquality().hash(signedInAt);
 
+  @JsonKey(ignore: true)
   @override
   _$UserCopyWith<_User> get copyWith =>
       __$UserCopyWithImpl<_User>(this, _$identity);
@@ -205,5 +207,6 @@ abstract class _User implements User {
   @override
   DateTime get signedInAt;
   @override
+  @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith;
 }
