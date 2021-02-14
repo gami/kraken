@@ -22,6 +22,8 @@ dependencies:
   flutter_state_notifier: ^0.6.1
   freezed: ^0.12.7
   hooks_riverpod: ^0.12.3+1
+  json_annotation: ^3.1.1
+  json_serializable: ^3.5.1
   pedantic: ^1.9.2
   pedantic_mono: any
   shared_preferences: ^0.5.12+4
