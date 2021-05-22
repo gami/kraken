@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kuraken/app_config.dart';
-import 'package:kuraken/controller/app_controller.dart';
-import 'package:kuraken/controller/user_controller.dart';
-import 'package:kuraken/ui/screens/index.dart';
+import 'package:kraken/app_config.dart';
+import 'package:kraken/controller/app_controller.dart';
+import 'package:kraken/controller/user_controller.dart';
+import 'package:kraken/ui/screens/index.dart';
 
 Future<void> main() async {
   runApp(

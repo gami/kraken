@@ -1,11 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kuraken/app_config.dart';
-import 'package:kuraken/controller/error_controller.dart';
-import 'package:kuraken/controller/user_controller.dart';
-import 'package:kuraken/ui/components/index.dart';
-import 'package:kuraken/ui/screens/home_screen.dart';
+import 'package:kraken/app_config.dart';
+import 'package:kraken/controller/error_controller.dart';
+import 'package:kraken/controller/user_controller.dart';
+import 'package:kraken/ui/components/index.dart';
+import 'package:kraken/ui/screens/home_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   static const String id = 'sign_in';

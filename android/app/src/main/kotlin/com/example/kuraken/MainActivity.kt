@@ -1,4 +1,4 @@
-package jp.srkm.kuraken
+package jp.srkm.kraken
 
 import io.flutter.embedding.android.FlutterActivity
 

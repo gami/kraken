@@ -1,13 +1,13 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kuraken/controller/error_controller.dart';
 import 'package:tuple/tuple.dart';
 import 'package:twitter_login/twitter_login.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:kuraken/app_config.dart';
-import 'package:kuraken/entity/user.dart';
-import 'package:kuraken/exception/auth_exception.dart';
-import 'package:kuraken/repository/user_repository.dart';
+import 'package:kraken/controller/error_controller.dart';
+import 'package:kraken/app_config.dart';
+import 'package:kraken/entity/user.dart';
+import 'package:kraken/exception/auth_exception.dart';
+import 'package:kraken/repository/user_repository.dart';
 
 final _user = StateProvider.autoDispose<User>((ref) => null);
 

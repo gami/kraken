@@ -1,14 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kuraken/entity/user.dart' as entity;
+import 'package:kraken/entity/user.dart' as entity;
 
 final firebaseClient = Provider((ref) => FirebaseClient());
 
 class FirebaseClient {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future<void> init() async {
+  static Future<void> init() async {
     await Firebase.initializeApp();
   }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kuraken/app_config.dart';
+import 'package:kraken/app_config.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String id = 'home';
@@ -9,26 +9,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppConfig.appName),
-        bottom: const TabBar(
-          tabs: [
-            Tab(
-              icon: Icon(Icons.stars_sharp),
-              text: 'Ranking',
-            ),
-            Tab(
-              icon: Icon(Icons.schedule),
-              text: 'Match',
-            ),
-            Tab(
-              icon: Icon(Icons.group),
-              text: 'Team',
-            ),
-            Tab(
-              icon: Icon(Icons.self_improvement),
-              text: 'Profile',
-            ),
-          ],
-        ),
       ),
       body: Scaffold(
         backgroundColor: Colors.indigo[900],
@@ -45,6 +25,28 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.stars_sharp),
+              label: 'Ranking',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.schedule),
+              label: 'Match',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.group),
+              label: 'Team',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.self_improvement),
+              label: 'Profile',
+            ),
+          ],
+          currentIndex: 1,
+          onTap: (value) => {},
         ),
       ),
     );

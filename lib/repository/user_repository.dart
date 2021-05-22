@@ -1,5 +1,5 @@
-import 'package:kuraken/client/firebase_client.dart';
-import 'package:kuraken/entity/index.dart';
+import 'package:kraken/client/firebase_client.dart';
+import 'package:kraken/entity/index.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final userRepository =
